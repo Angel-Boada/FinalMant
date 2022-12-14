@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="/css/estilomaqu.css" rel="stylesheet">
+    <style>
+        label.error{
+            color: red;
+        }
+        input.error{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">  
+        <div id="header">
+            <h1 style="font-size: 70px; text-align:center">Bienvenido a formularios</h1>
+        </div> 
+        <div id="nav">
+            <ul>
+                <li><a href="/index.html">inicio</a></li>
+                <li><a href="/html/tabla.html">Tabla</a></li>
+                <li><a href="/html/problematica.html">Problemática</a></li>
+                <li><a href="/html/contacto.html">Contácto</a></li>
+                <li><a href="/html/acercaDe.html">Acerca de</a></li>
+            </ul>
+        </div>
+        <div id="section" style="width:100%; height: 36%;">
+            <!--Formato del formulario-->
+            <form id="formclase">
+                <legend>Registro</legend>
+                <div>
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" placeholder="Digite su usuario" id="nombreuser">
+                </div>
+        
+                <div>
+                    <label for="Correo">Correo</label>
+                    <input type="email" placeholder="Digite su correo" id="email">
+                </div>
+        
+                <div>
+                    <label for="Contraseña">Contraseña</label>
+                    <input type="password" placeholder="Contraseña" id="Contraseña">
+                </div>
+        
+                <div>
+                    <label for="Documento">Documento de identidad</label>
+                    <input type="number" placeholder="Documento" id="cedula">
+                </div>
+        
+                <div>
+                    Sexo
+                    <select name="Sexo">
+                        <option value="default" selected></option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                        <option value="NoEspecif">Prefiero no especificar</option>
+                    </select>
+                </div>
+        
+                <div>
+                    <label for="NumCelular">Número de celular</label>
+                    <input type="number" placeholder="Escriba su número" id="numero">
+                </div>
+        
+                <div>
+                    <label for="Estrato">Estrato Social</label>
+                    <input type="number"  value="" min="1" max="8" step="1" placeholder="Estrato" id="Estrato">
+                </div>
+        
+                <div>
+                    <label for="">Dirección</label>
+                    <input type="text" placeholder="Dirección" id="Dirección">
+                </div>
+        
+                <div>
+                    <label for="EPS">EPS</label>
+                    <input type="text" placeholder="EPS" id="">
+                </div>
+        
+                <div>
+                    ¿Fuma?
+                    <label for="si"></label>
+                    <input type="radio" placeholder="fumarSi" value="Si" id="fumarSi"> Si
+                    <input type="radio" placeholder="fumarNo" value="No" id="fumarNo"> No
+                </div>
+        
+                <div>
+                    <label for="Fecha">Fecha de nacimiento</label>
+                    <input type="date" placeholder="Fecha" id="fecha">
+                </div>
+        
+                <div>
+                    <label for="Terminos">Al enviar este formulario, acepta usted los T&C de Respira.</label>
+                    <input type="checkbox" placeholder="Terminos" id="Terminos">
+                </div>
+                <br>
+                <div>
+                    <button onclick="enviar()">Enviar</button>
+                </div>
+        
+            </form>
+        
+        </div>
+    </div>
+    
+    
+    <!--Scripts para JS-->
+    <script src="/js/jquery-3.6.1.min.js"></script>
+    <script src="/js/funciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
